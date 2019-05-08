@@ -60,7 +60,12 @@ li {
 	padding: 10px;
 }
 
-.container .page_title i {
+.container .page_title a:hover {
+	color: #fff;
+}
+
+.container .page_title a i {
+	margin: 0px 0px 0px 7px;
 	display: inline;
 	float: right;
 }
