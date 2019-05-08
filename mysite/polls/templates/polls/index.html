@@ -3,6 +3,7 @@
 	{% if latest_question_list %}
 	<div class="page_title"><li>투표 목록</li></div>
 	<div class="contents">
+		{% if latest_question_list %}
 		<h3>최근 올라온 5개의 투표들입니다.</h3>
 		<ul>
 			{% for question in latest_question_list %}
@@ -10,8 +11,8 @@
 			<br>
 			{% endfor %}
 		</ul>
-	{% else %}
-		<p>No polls are available.</p>
+		{% else %}
+		<p>등록된 투표가 없습니다.</p>
 	</div>
 	{% endif %}
 {% endblock %}
