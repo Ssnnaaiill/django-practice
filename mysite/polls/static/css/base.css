@@ -21,6 +21,8 @@ body {
 a {
 	color: #000;
 	text-decoration: none;
+	-webkit-transition: width 2s, height 2s, color 0.5s, -webkit-transform 2s;
+	transition: width 2s, height 2s, color 0.5s, transform 2s;
 }
 
 a:hover {
@@ -54,12 +56,17 @@ li {
 	border-radius: 5px 5px 0px 0px;
 }
 
-.container .page_title li {
+.container .page_title p {
 	padding: 10px;
 }
 
+.container .page_title i {
+	display: inline;
+	float: right;
+}
+
 .container .contents {
-	padding: 20px;
+	padding: 0px 0px 0px 20px;
 }
 
 .error {
@@ -79,8 +86,8 @@ input[type=submit] {
 	cursor: pointer;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
-       -webkit-transition: width 2s, height 2s, background-color 0.5s, -webkit-transform 2s;
-       transition: width 2s, height 2s, background-color 0.5s, transform 2s;       
+	-webkit-transition: width 2s, height 2s, background-color 0.5s, -webkit-transform 2s;
+	transition: width 2s, height 2s, background-color 0.5s, transform 2s;       
 }
 input[type=submit]:hover {
 	background-color: #fc0072;
