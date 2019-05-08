@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html>
-	<body>
-		<h1>{{ question.question_text }}</h1>
-		<ul>
-			{% for choice in question.choice_set.all %}
-			<li>{{ choice.choice_text }} : {{ choice.votes }} vote{{ choice.votes | pluralize }}</li>
-			{% endfor %}
-		</ul>
-		<a href='{% url 'polls:detail' question.id %}'>Vote Again?</a>
-	</body>
-</html>
+{% extends 'polls/base.html' %}
+{% block content %}
+<div class="page_title"><li>투표 결과</li></div>
+<div class="contents">
+	<h3>제목 : {{ question.question_text }}</h3>
+	<ul>
+		{% for choice in question.choice_set.all %}
+		<li>{{ choice.choice_text }} : {{ choice.votes }} vote{{ choice.votes | pluralize }}</li>
+		{% endfor %}
+	</ul>
+	<input type='submit' href='{% url 'polls:detail' question.id %}'value='한번 더'/>
+</div>
+{% endblock %}

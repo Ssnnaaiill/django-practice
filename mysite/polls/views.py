@@ -28,7 +28,7 @@ def vote(request, question_id):
     except(KeyError, Choice.DoesNotExist):
         return render(request, 'polls/detail.html', {
             'question': question,
-            'error_message': "선택은 하셔야죵",
+            'error_message': "소중한 한 표를 행사해 주세요!",
             })
     else:
         selected_choice.votes += 1
