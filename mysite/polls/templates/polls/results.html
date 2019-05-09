@@ -4,7 +4,7 @@
 	<h3>"{{ question.question_text }}" 투표 결과</h3>
 	<ul>
 		{% for choice in question.choice_set.all %}
-		<li>{{ choice.choice_text }} : {{ choice.votes }} vote{{ choice.votes | pluralize }}</li>
+		<li>{{ choice.choice_text }} : {{ choice.votes }}표<!--{{ choice.votes | pluralize }}--></li>
 		{% endfor %}
 	</ul>
 	<a href='{% url 'polls:detail' question.id %}'><input type='submit' value='한번 더'/></a>
