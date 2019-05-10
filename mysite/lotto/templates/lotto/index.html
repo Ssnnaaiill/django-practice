@@ -1,0 +1,18 @@
+{% extends 'lotto/base.html' %}
+{% block content %}
+
+<div class="new_post_link">
+	<a href="/lotto/new"><i class="fas fa-feather-alt"></i></a>
+	<li>로또 앱</li>
+</div>
+
+{% for lotto in lottos %}
+<div class="block">
+	<h3>{{ lotto.text }}</h3>
+	<div class="contents">
+		<p>{{ lotto.update_date }} ··· {{ lotto.name }}</p>
+		<p>{{ lotto.lottos | linebreaksbr }}</p>
+	</div>
+</div>
+{% endfor %}
+{% endblock %}

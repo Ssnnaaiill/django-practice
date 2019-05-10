@@ -1,0 +1,65 @@
+@font-face {
+	font-family: 'DOSGothic';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'DOSGothic';
+	color: #981CEB;
+	background-color: #10171E;
+}
+
+a {
+	color: #444;
+	text-decoration: none;
+	-webkit-transition: color 0.3s, -webkit-transform 2s;
+	transition: color 0.3s, transform 2s;
+}
+
+a:hover {
+	color: #981CEB;
+}
+
+.container {
+	width: 910px;
+	margin: 0 auto;
+}
+
+.new_post_link {
+	width: 910px;
+	font-size: 30px;
+	margin: 10px auto;
+	padding-bottom: 50px;
+}
+
+.container li {
+	list-style: none;
+	float: left;
+}
+
+i {
+	float: left;
+}
+
+.container .block {
+	float: left;
+	width: 400px;
+	height: auto;
+	margin: 5px;
+	padding: 0px 20px 20px 20px;
+	border: 1px solid #38444D;
+	background-color: #15202B;
+	-webkit-transition: background-color 0.3s, -webkit-transform 2s;
+	transition: background-color 0.3s, transform 2s;
+}
+
+.container .block:hover {
+	background-color: #10171E;
+}
+
+.container .block .contents {
+	/*font-family: 'NanumSquare';*/ 
+	color: #fff;
+}

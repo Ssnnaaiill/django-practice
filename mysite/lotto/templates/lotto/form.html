@@ -1,0 +1,15 @@
+{% extends 'lotto/base.html' %}
+{% block content %}
+
+<div class="new_post_link">
+	        <a href="/lotto/"><i class="fas fa-home"></i></a>
+</div>
+
+<div class="block">
+	<form method="POST" class="post_form">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit">저장</button>
+	</form>
+</div>
+{% endblock %}
